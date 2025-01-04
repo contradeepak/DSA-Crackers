@@ -1,0 +1,71 @@
+What is the difference between = (Assignment) and == (Equal to) operators
+Last Updated : 21 Feb, 2023
+= operator
+
+The “=” is an assignment operator used to assign the value on the right to the variable on the left. 
+
+For example:
+
+a = 10;
+b = 20;
+ch = 'y';
+Example: 
+
+
+
+
+// C program to demonstrate
+// working of Assignment operators
+ 
+#include <stdio.h>
+ 
+int main()
+{
+ 
+    // Assigning value 10 to a
+    // using "=" operator
+    int a = 10;
+    printf("Value of a is %d\n", a);
+ 
+    return 0;
+}
+Output:
+Value of a is 10
+== operator
+
+The ‘==’ operator checks whether the two given operands are equal or not. If so, it returns true. Otherwise it returns false. 
+
+For example:
+
+5==5
+
+This will return true.
+Example: 
+
+
+
+
+// C program to demonstrate
+// working of relational operators
+#include <stdio.h>
+ 
+int main()
+{
+    int a = 10, b = 4;
+ 
+    // equal to
+    if (a == b)
+        printf("a is equal to b\n");
+    else
+        printf("a and b are not equal\n");
+ 
+    return 0;
+}
+Output:
+a and b are not equal
+The differences can be shown in tabular form as follows:
+
+=	==
+It is an assignment operator.	It is a relational or comparison operator.
+It is used for assigning the value to a variable.	It is used for comparing two values. It returns 1 if both the values are equal otherwise returns 0.
+Constant term cannot be placed on left hand side. Example: 1=x; is invalid.	Constant term can be placed in the left hand side. Example: 1==1 is valid and returns 1.

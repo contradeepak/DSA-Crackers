@@ -1,0 +1,53 @@
+Given the head of a singly linked list, return true if it is a 
+palindrome
+ or false otherwise.
+
+ 
+
+Example 1:
+
+
+Input: head = [1,2,2,1]
+Output: true
+Example 2:
+
+
+Input: head = [1,2]
+Output: false
+
+
+
+Solution :
+
+
+
+bool isPalindrome(ListNode* head) {
+        // Step 1: Find the middle of the list using slow and fast pointers
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        while (fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+     // Step 2: Reverse the second half of the list
+     ListNode* prev = nullptr;
+     while(slow!=nullptr){
+        ListNode* temp = slow->next;
+        slow->next = prev;
+        prev = slow;
+        slow = temp;
+     }
+      // Step 3: Compare the first half and the reversed second half 
+      ListNode* left = head;
+      ListNode* right = prev;
+
+      while(right!= nullptr){
+        if(left->val!=right->val){
+            return false; // Mismatch found
+        }
+        left = left->next; //Move left pointer
+        right = right->next; // Move right pointer
+      }
+      return true; //All values matched, it's a palindrome
+    }
