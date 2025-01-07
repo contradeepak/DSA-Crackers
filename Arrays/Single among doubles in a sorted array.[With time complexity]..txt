@@ -1,0 +1,17 @@
+ int findOnce(vector<int>& arr) {
+
+
+  for (int i = 0; i < arr.size(); ) {
+        // Check if the current element has a duplicate
+        if (i + 1 < arr.size() && arr[i] == arr[i + 1]) {
+            // Skip the duplicate elements
+            i += 2;
+        } else {
+            // If no duplicate, the current element is unique
+            return arr[i];
+        }
+    }
+
+    // Step 3: If no unique element is found
+    return -1; // Or any sentinel value indicating no unique element
+}
