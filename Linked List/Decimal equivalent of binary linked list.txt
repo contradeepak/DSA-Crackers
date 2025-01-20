@@ -1,0 +1,41 @@
+Given a singly linked list. The link list represents a binary number, ie- it contains only 0s and 1s. Find its decimal equivalent.
+The significance of the bits decreases with the increasing index in the linked list. An empty linked list is considered to represent the decimal value 0. 
+
+Since the answer can be very large, the answer modulo 109+7 should be returned.
+
+Examples:
+
+Input: Linked List = 1 -> 1 -> 1 -> 0
+
+Output: 14
+Explanation: 1*23 + 1*22 + 1*21 + 0*20 =  8 + 4 + 2 + 0 = 14
+Input: Linked List: 0 -> 1 -> 1
+Output: 3
+Explanation: 0*22 + 1*21 + 1*20 =  1 + 2 + 0 = 3
+Expected Time Complexity: O(n)
+Expected Space Complexity: O(1) 
+
+
+Solution :
+
+
+long long unsigned int decimalValue(Node *head)
+        {
+           // Your Code Here
+          long long unsigned int d = 0;
+
+        Node *ptr = head;
+//1101          7
+        while (ptr != NULL)
+        {
+            // Left shift the current result by 1 and add the current bit
+            d = (d << 1) + ptr->data;
+            d = d % MOD;
+
+            ptr = ptr->next;
+        }
+
+        return d;
+           
+        }
+};

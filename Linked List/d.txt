@@ -1,0 +1,49 @@
+Given two strings A and B, you need to find the last occurrence ( 1 based indexing) of string B in string A.
+
+ 
+
+Example 1:
+
+Input:
+A = abcdefghijklghifghsd
+B = ghi
+Output:
+13
+Explanation:
+ghi occurs at position 13 for the
+last time in string A.
+Example 2:
+
+Input:
+A = abdbccaeab
+B = abc
+Output:
+-1
+Explanation:
+abc is not a substring of A
+
+Solution :
+
+Given two strings A and B, you need to find the last occurrence ( 1 based indexing) of string B in string A.
+
+ 
+
+Example 1:
+
+Input:
+A = abcdefghijklghifghsd
+B = ghi
+Output:
+13
+Explanation:
+ghi occurs at position 13 for the
+last time in string A.
+Example 2:
+
+Input:
+A = abdbccaeab
+B = abc
+Output:
+-1
+Explanation:
+abc is not a substring of A
